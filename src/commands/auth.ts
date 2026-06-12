@@ -40,6 +40,6 @@ export const whoami = new Command("whoami")
 				console.log(`Logged in as ${user.role} @ username: ${user.username}`);
 			}
 		} catch (error) {
-			console.log(error);
+			console.log("Error Please login");
 		}
 	});
