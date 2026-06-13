@@ -5,6 +5,11 @@ import os from "os";
 const DIR = path.join(os.homedir(), ".insighta");
 const FILE = path.join(DIR, "credentials.json");
 
+interface Token {
+	access_token: string;
+	refresh_token: string;
+}
+
 export const saveCredentials = (
 	access_token: string,
 	refresh_token: string,
@@ -26,7 +31,7 @@ export const saveCredentials = (
 	}
 };
 
-export const loadCredentials = () => {
+export const loadCredentials = (): Token | null => {
 	/**
 	 * Load user auth tokens from Json file and
 	 * return the tokens when successful else return
