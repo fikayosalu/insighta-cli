@@ -24,7 +24,7 @@ export const get = new Command("get")
 				timeoutErrorMessage: "Request timed out",
 			});
 			const profile: Profile = response.data.data;
-			const table = new Table({ head: Object.keys(profile!) });
+			const table = new Table({ head: Object.keys(profile) });
 			table.push(Object.values(profile));
 
 			console.log(table.toString());
