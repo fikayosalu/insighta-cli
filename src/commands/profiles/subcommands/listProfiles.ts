@@ -4,6 +4,7 @@ import axios from "axios";
 import { loadCredentials } from "../../../utils/credentials";
 import Table from "cli-table3";
 import { Profile } from "../../../types";
+import { axiosErrorHandler } from "../../../utils/helpers";
 
 export const list = new Command("list")
 	.description("List all profiles")
@@ -59,6 +60,6 @@ export const list = new Command("list")
 				);
 			}
 		} catch (error) {
-			console.log("Something went wrong. Please try later");
+			axiosErrorHandler(error);
 		}
 	});
