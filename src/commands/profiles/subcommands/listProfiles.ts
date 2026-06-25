@@ -46,7 +46,7 @@ export const list = new Command("list")
 
 			const profiles: Profile[] = response.data.data;
 
-			if (profiles.length == 0 || !profiles) {
+			if (!profiles || profiles.length == 0) {
 				console.log([]);
 				return;
 			} else {
