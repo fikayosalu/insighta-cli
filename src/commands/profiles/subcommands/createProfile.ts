@@ -1,3 +1,8 @@
+/**
+ * This file contains CLI command "create" ,
+ * used to create a profile in the database
+ */
+
 import { Command } from "commander";
 import { loadCredentials } from "../../../utils/credentials";
 import axios from "axios";
@@ -8,7 +13,7 @@ import { axiosErrorHandler } from "../../../utils/helpers";
 
 export const create = new Command("create")
 	.description("Create a profile")
-	.option("--name <name>", "name of the profile to create")
+	.requiredOption("--name <name>", "name of the profile to create")
 	.action(async (options) => {
 		const tokens = loadCredentials();
 		if (!tokens) return console.log("Please log in");

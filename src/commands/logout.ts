@@ -1,3 +1,8 @@
+/**
+ * This file contains the CLI "logout" command.
+ * It logs a user out of the current session and clears the user credentials
+ */
+
 import { Command } from "commander";
 import { clearCredentials, loadCredentials } from "../utils/credentials";
 import axios from "axios";

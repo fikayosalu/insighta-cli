@@ -1,3 +1,9 @@
+/**
+ * This file contains the CLI "login" command
+ * The command authenticates the user and stores credentials
+ * in a JSON file
+ */
+
 import { Command } from "commander";
 import crypto from "crypto";
 import http from "http";

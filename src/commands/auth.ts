@@ -1,12 +1,12 @@
+/**
+ * This file contains CLI command "whoami"
+ * to show logged in user information
+ */
+
 import { Command } from "commander";
 import axios from "axios";
 import { loadCredentials } from "../utils/credentials";
 import { API_URL } from "../config";
-
-interface Tokens {
-	access_token: string;
-	refresh_token: string;
-}
 
 interface User {
 	id: string;
@@ -23,7 +23,7 @@ export const whoami = new Command("whoami")
 	.description("Show current logged-in user")
 	.action(async () => {
 		try {
-			const tokens: Tokens = loadCredentials();
+			const tokens = loadCredentials();
 
 			if (!tokens) {
 				console.log("Not logged in. Run 'insighta login'");
