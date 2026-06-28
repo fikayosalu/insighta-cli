@@ -16,7 +16,6 @@ const program = new Command();
 program.name("insighta").description("CLI for Insighta Lab+").version("1.0.0");
 
 program.addCommand(whoami);
-
 program.addCommand(login);
 program.addCommand(logout);
 program.addCommand(profile);

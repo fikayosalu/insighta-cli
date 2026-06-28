@@ -10,7 +10,7 @@ import { create } from "./subcommands/createProfile";
 import { search } from "./subcommands/searchProfile";
 import { exportProfile } from "./subcommands/exportProfile";
 
-export const profile = new Command("profile");
+export const profile = new Command("profiles");
 
 profile.addCommand(list);
 profile.addCommand(get);

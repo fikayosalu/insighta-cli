@@ -203,6 +203,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  insighta-cli: 'link:'
+
 importers:
 
   .:
@@ -219,6 +222,9 @@ importers:
       commander:
         specifier: ^15.0.0
         version: 15.0.0
+      insighta-cli:
+        specifier: 'link:'
+        version: 'link:'
       open:
         specifier: ^11.0.0
         version: 11.0.0
