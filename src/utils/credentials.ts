@@ -1,3 +1,7 @@
+/**
+ * This module contains functions used to store, load and
+ * clear user credentials
+ */
 import fs from "fs";
 import path from "path";
 import os from "os";
